@@ -12,3 +12,6 @@ class dataLineox:
 
         # Radio Links Companies
         self.companiesList = self.df['Titular'].sort_values().unique()
+
+    def createMap(self):
+        pass
