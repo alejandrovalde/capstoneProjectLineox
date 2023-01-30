@@ -32,11 +32,13 @@ class dataLineox:
         self.compnbr = len(self.df['NIF/CIF'].unique())
         
         #Avg, number of radio links per company
-        self.rlperowner = round(self.rlnbr/self.compnbr,0)
+        self.rlperowner = round(self.rlnbr/self.compnbr)
         
         # Top 10 companies
         self.top10 = self.df.groupby(by=['Titular', 'NIF/CIF'])['Ref'].count().sort_values(ascending=False).reset_index().head(10)
         self.top10 = self.top10.rename(columns={'Ref': 'Radio links number'})
+        self.top10['Radio links share'] = round((self.top10['Radio links number']/self.rlnbr)*100).astype(str) + '%'
+        self.top10.set_index('Titular', inplace=True)
         
     def createMap(self):
         pass
