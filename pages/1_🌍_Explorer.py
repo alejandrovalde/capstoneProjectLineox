@@ -21,6 +21,7 @@ def convert_df(df):
     return df.to_csv().encode('utf-8')
 csv = convert_df(dataLineox.df)
 
+
 # SECTION 1: COUNTRY-LEVEL METRICS
 
 st.subheader("Country level metrics")
@@ -39,10 +40,12 @@ with col2:
 
 st.image('banner.png', use_column_width='never')
 
+
 # SECTION 2: FILTERING
 
 st.subheader("Drilling down")
 
+#Filters
 st.markdown("""<span style='color:#00008B'>**FILTERS**</span>""",unsafe_allow_html=True)
 col1, col2 = st.columns([1,1], gap='medium')
 
@@ -105,13 +108,13 @@ with col1:
     st.metric("Companies", len(table['NIF/CIF'].unique()))
     st.metric("Avg. number of radio links per company", round(len(table['Ref'].unique())/len(table['NIF/CIF'].unique())))
             
+
 #Radio links top 10 table
 top = dataLineox.df.groupby(by=['Titular','NIF/CIF','Comunidad','Localidad','Frecuencia','FCaducidad'])['Ref'].count().sort_values(ascending=False).reset_index()
 top['Days'] = [int((x.date()-date.today()).days) for x in top['FCaducidad']]
 top = top.rename(columns={'Ref': 'Radio links number'})
 
 with col2:
-
     st.markdown("""<span style='color:#00008B'>**Top 10 radio links groups**</span>""",unsafe_allow_html=True)
 
     top = dataLineox.df.groupby(by=['Titular','NIF/CIF','Comunidad','Localidad','Frecuencia','FCaducidad'])['Ref'].count().sort_values(ascending=False).reset_index()
@@ -127,6 +130,9 @@ with col2:
         ,['Titular','NIF/CIF','Frecuencia','Days','Radio links number']].head(10).set_index('Titular')
         )
 
+#Spain map
+dataLineox.createMap()
+    
 #Full dataset table
 st.markdown("""<span style='color:#00008B'>**Full dataset**</span>""",unsafe_allow_html=True)
 
