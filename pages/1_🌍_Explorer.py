@@ -64,7 +64,7 @@ with col1:
     st.markdown("""<span style='color:#00008B'>**Metrics**</span>""",unsafe_allow_html=True)
     st.metric("Radio links", dataLineox.calculateKPI(lfreq, hfreq, ldays, hdays, com_op, loc_op, owner_op)[0]) 
     st.metric("Companies", dataLineox.calculateKPI(lfreq, hfreq, ldays, hdays, com_op, loc_op, owner_op)[1])
-    st.metric("Avg. number of radio links per company", dataLineox.calculateKPI(lfreq, hfreq, ldays, hdays, com_op, loc_op, owner_op)[2])
+    st.metric("Avg. Number Radio Links", dataLineox.calculateKPI(lfreq, hfreq, ldays, hdays, com_op, loc_op, owner_op)[2])
             
 #Radio links top 10 table
 with col2:

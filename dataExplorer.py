@@ -54,7 +54,7 @@ class dataLineox:
         return rlnbr,compnbr,rlperowner
 
     def topOwners(self, lfreq, hfreq, ldays, hdays, com_op, loc_op, owner_op):
-        top10 = self.df.loc[
+        df = self.df.loc[
             (self.df['Frecuencia'] >= lfreq) 
             & (self.df['Frecuencia'] <= hfreq) 
             & (self.df['Days'] >= ldays) 
@@ -63,13 +63,13 @@ class dataLineox:
             & (self.df['Localidad'].isin(loc_op))
             & (self.df['Titular'].isin(owner_op))
         ,:]
-        rlnbr = len(top10['Ref'].unique())
-        top10 = top10.groupby(by=['Titular', 'NIF/CIF'])['Ref'].count().sort_values(ascending=False).reset_index().head(10)
-        top10 = top10.rename(columns={'Ref': 'Radio links number'})
-        top10['Radio links share'] = round((top10['Radio links number']/rlnbr)*100).astype(str) + '%'
-        top10 = top10.set_index('Titular')
+        rlnbr = len(df['Ref'].unique())
+        df = df.groupby(by=['Titular', 'NIF/CIF'])['Ref'].count().sort_values(ascending=False).reset_index()
+        df = df.rename(columns={'Ref': 'Radio links number'})
+        df['Radio links share'] = round((df['Radio links number']/rlnbr)*100).astype(str) + '%'
+        df = df.set_index('Titular')
 
-        return top10
+        return df.head(10)
 
     def createMap(self, lfreq, hfreq, ldays, hdays, com_op, loc_op, owner_op):
         df = self.df.loc[
