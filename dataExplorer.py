@@ -19,10 +19,6 @@ class dataLineox:
         self.maxFreq = float(self.df['Frecuencia'].max())
         self.minFreq = float(self.df['Frecuencia'].min())
 
-        # Max and Min Expiration date for slider
-        self.maxDate = int((self.df['FCaducidad'].max().date()-date.today()).days)
-        self.minDate = int((self.df['FCaducidad'].min().date()-date.today()).days)
-        
         # Radio Links Companies
         self.companiesList = self.df['Titular'].sort_values().unique()
         
