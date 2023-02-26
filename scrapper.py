@@ -1,7 +1,5 @@
 import pandas as pd # import pandas
 from playwright.sync_api import sync_playwright # import playwright
-#from bs4 import BeautifulSoup # import beautifulsoup
-import requests # import requests
 import math 
 import time
 
