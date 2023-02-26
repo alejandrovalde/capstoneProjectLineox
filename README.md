@@ -27,10 +27,21 @@ Finally, the project includes a **dashboard**, which is divided in two sections:
 
 ## 2. How to Run the Project
 
-### 2.1 Automated Install
+### 2.1 Automated Install (Friendly User)
 
-1. Save the Lineoxapp folder in your Desktop
-2. 
+1. Save the Lineoxapp folder in your Desktop 
+2. Double click on the python 3.11 installer, close the python popup folder
+3. Double click on the OS/Windows Installer
+
+        3.1 If a text editor opens instead of the terminal, you need to change the app that opens the file to the Terminal.
+        
+        3.1.1 Right-click on the OS Installer and select "Get Info". Look for "Terminal" in "Open with".
+
+        3.1.2 If you cannot see the Terminal or cannot select it, click "Other", enable "All applications", select the Terminal, click "OK", and then select "Change All". This will ensure that all similar files open with the "Terminal".
+
+    3.2 Do the same with the rest of apps if they open the text editor
+
+4. Double click on the app you want to use
 
 ### 2.2 Manual Install (If Automated Install doesn´t work)
 
