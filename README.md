@@ -39,7 +39,7 @@ Finally, the project includes a **dashboard**, which is divided in two sections:
 
         3.1.2 If you cannot see the Terminal or cannot select it, click "Other", enable "All applications", select the Terminal, click "OK", and then select "Change All". This will ensure that all similar files open with the "Terminal".
 
-    3.2 Do the same with the rest of apps if they open the text editor
+        3.2 Do the same with the rest of apps if they open the text editor
 
 4. Double click on the app you want to use
 
