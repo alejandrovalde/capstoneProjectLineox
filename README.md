@@ -23,35 +23,28 @@ Finally, the project includes a **dashboard**, which is divided in two sections:
 ## 1. General Requirements and Dependencies
 
 - **Pandas:** `pip install pandas`
-- **Playwright:** `pip install playwright`
-- **Requests:** `pip install requests`
-- **Math:** included in Python's standard library, no need for installation
-- **Numpy:** `pip install numpy`
-- **Datetime:** included in Python's standard library, no need for installation
-- **Pandas Cut:** included in Pandas library, no need for installation
 - **Numpy Financial:** `pip install numpy_financial`
+- **Playwright:** `pip install playwright`
 - **Plotly:** `pip install plotly`
 - **Folium:** `pip install folium`
+- **Streamlit:** `pip install streamlit`
+- **Ag-Grid for Streamlit**: `pip install st_aggrid`
+- **Folium for Streamlit**: `pip install streamlit_folium`
+
+> Note: Specific library versions used in the development environment can be found in `requirements.txt`
 
 ## 2. How to Run the Project
 
-### 2.1 Automated Install (Friendly User)
+### 2.1 Automated Install (User Friendly)
 
 1. Save the Lineoxapp folder in your Desktop 
 2. Double click on the python 3.11 installer, close the python popup folder
 3. Double click on the OS/Windows Installer
-
-        3.1 If a text editor opens instead of the terminal, you need to change the app that opens the file to the Terminal.
-        
-        3.1.1 Right-click on the OS Installer and select "Get Info". Look for "Terminal" in "Open with".
-
-        3.1.2 If you cannot see the Terminal or cannot select it, click "Other", enable "All applications", select the Terminal, click "OK", and then select "Change All". This will ensure that all similar files open with the "Terminal".
-
-        3.2 Do the same with the rest of apps if they open the text editor
-
 4. Double click on the app you want to use
 
-### 2.2 Manual Install (If Automated Install doesn´t work)
+> Note: If a text editor opens instead of the terminal, you need to change the app that opens the file to "Terminal".
+
+### 2.2 Manual Install
 
 #### Project setup
 
@@ -79,16 +72,10 @@ Finally, the project includes a **dashboard**, which is divided in two sections:
     
     1.4  Windows Users: `lenv\Scripts\activate.bat` 
 
-**Note:** Make sure that you only have one virtual environment activated.
+>Note: Make sure that you only have one virtual environment activated.
 If the beginning of your command line appears like this:
-
 “ *(lenv) (base) alvaro@Macbook-Pro-M1* “
-
-It means that you have two environments active (lenv) and (base). 
-
-You should only have one environment activated. Run the following command.
-
-`Conda deactivate`
+it means that you have two environments active (lenv) and (base). You should only have one environment activated. Run the following command: `Conda deactivate`
 
 #### Install the requirements of the project
 
