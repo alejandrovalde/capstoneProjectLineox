@@ -4,9 +4,9 @@
 
 This project is a **web scraping and data analysis tool** designed to collect information about radiolinks across different provinces in Spain. Specifically, the tool scrapes data from the search engine provided at https://sedeaplicaciones.minetur.gob.es/RPC_Consulta/FrmConsulta.aspx and saves the information collected in a structured CSV file called 'data.csv'.
 
-The aim of this project is to help Lineox collect data of the Radiolinks market in Spain to use for their **company acquision strategy**, using a user-friendly dashboard that provides valuable insights and analysis.
+The aim of this project is to help Lineox collect data of the Radiolinks market in Spain to use for their **radiolink acquision strategy**, using a user-friendly dashboard that provides valuable insights and analysis.
 
-To achieve **the web scrapping + standarization of the data**, the project includes two main components: `scrapper.py` and `dataprep.py`. The `scrapper.py` is responsible for webscraping the data and saving it to 'rl_data.csv', while `dataprep.py` performs data standarization and cleaning to convert 'rl_data.csv' into a structured table format in 'data.csv'.
+To achieve **the web scraping + standarization of the data**, the project includes two main components: `scrapper.py` and `dataprep.py`. The `scrapper.py` is responsible for webscraping the data and saving it to 'rl_data.csv', while `dataprep.py` performs data standarization and cleaning to convert 'rl_data.csv' into a structured table format in 'data.csv'.
 
 Finally, the project includes a **dashboard**, which is divided in two sections:
 1. **Explorer**: Allows the user to explore the dataset of radiolinks in Spain using several visualization charts and a set of filters.
@@ -35,21 +35,21 @@ Finally, the project includes a **dashboard**, which is divided in two sections:
 
 ## 2. How to Run the Project
 
-### 2.1 Automated Install (User Friendly)
+### 2.1 Automated Installation (For MacOS Users)
 
-1. Save the Lineoxapp folder in your Desktop 
-2. Double click on the python 3.11 installer, close the python popup folder
+1. Save the 'Lineoxapp' folder in the Desktop 
+2. Double click on the Python 3.11 installer, close the python popup folder
 3. Double click on the OS/Windows Installer
 4. Double click on the app you want to use
 
 > Note: If a text editor opens instead of the terminal, you need to change the app that opens the file to "Terminal".
 
-### 2.2 Manual Install
+### 2.2 Manual Installation 
 
-#### Project setup
+#### Project Setup
 
 1.	Download CapstoneProjectLineox
-2.	Create a folder called ‘Lineoxapp’ in your **Dekstop**
+2.	Create a folder called ‘Lineoxapp’ in your **Desktop**
 3.	Save ‘CapstoneProjectLineox’ inside the folder called ‘Lineoxapp’
 
 #### Installing Python 3.11.0 or above
@@ -58,9 +58,9 @@ Finally, the project includes a **dashboard**, which is divided in two sections:
 2.	Install python, click continue till it gets installed
 3.	Close the pop up folder of python 3.11
 
-#### Virtual environment setup for Mac and Windows
+#### Virtual Environment Setup (for MacOS and Windows)
 
-1.	Create a virtual environment called ‘lenv’ inside the Lineoxapp folder and activate the environment (Do the following)
+1.	To create a virtual environment called ‘lenv’ inside the Lineoxapp folder and activate the environment
 
     Open a terminal, copy paste the following commands and press enter: 
 
@@ -68,12 +68,12 @@ Finally, the project includes a **dashboard**, which is divided in two sections:
    
     1.2 `python3.11 -m venv lenv`
    
-    1.3  Mac Users: `source lenv/bin/activate`   
+    1.3.1  MacOS Users: `source lenv/bin/activate`   
     
-    1.4  Windows Users: `lenv\Scripts\activate.bat` 
+    1.3.2  Windows Users: `lenv\Scripts\activate.bat` 
 
->Note: Make sure that you only have one virtual environment activated.
-If the beginning of your command line appears like this:
+>Note: Make sure that only one virtual environment is activated.
+If the beginning of the command line appears like this:
 “ *(lenv) (base) alvaro@Macbook-Pro-M1* “
 it means that you have two environments active (lenv) and (base). You should only have one environment activated. Run the following command: `Conda deactivate`
 
@@ -95,19 +95,23 @@ it means that you have two environments active (lenv) and (base). You should onl
 
     1.1 `cd Desktop/Lineoxapp`
     
-    1.2 `source lenv/bin/activate`
+    1.2.1 `source lenv/bin/activate` (for MacOS)
+
+    1.2.2 `lenv\Scripts\activate.bat` (for Windows)
     
     1.3 `cd CapstoneProjectLineox`
     
     1.4 `streamlit run Home.py`
 
-#### Webscrapper
+#### Webscraper
 
 1. Open the terminal and copy paste the next commands:
 
     1.1 `cd Desktop/Lineoxapp`
     
-    1.2 `source lenv/bin/activate`
+    1.2.1 `source lenv/bin/activate` (for MacOS)
+
+    1.2.2 `lenv\Scripts\activate.bat` (for Windows)
     
     1.3 `cd CapstoneProjectLineox`
     
@@ -117,9 +121,9 @@ it means that you have two environments active (lenv) and (base). You should onl
 
 ## 3. Code Documentation
 
-### 3.1 Webscrapper Documentation
+### 3.1 Webscraper Documentation
 
-- #### **WebScrapper:** `scrapper.py`
+- #### **WebScraper:** `scrapper.py`
 
 The web scraper component of the project is a Python script named **"scrapper.py"**. The script uses the Playwright library to navigate to a specific web page (https://sedeaplicaciones.minetur.gob.es/RPC_Consulta/FrmConsulta.aspx), select a specific option, and search for information about the radio links in different provinces of Spain. The script collects the data from the web page by extracting the text from each row of the table on the web page. It then stores the data in two separate lists - one for the main table and another for the frequency sub-table. The main list contains information about the owners of the radio links, and the frequency sub-table list contains information about the frequencies used by the radio links.
 
