@@ -10,7 +10,15 @@ To achieve **the web scrapping + standarization of the data**, the project inclu
 
 Finally, the project includes a **dashboard**, which is divided in two sections:
 1. **Explorer**: Allows the user to explore the dataset of radiolinks in Spain using several visualization charts and a set of filters.
+
+![image](screenshots/sc1.png)
+![image](screenshots/sc2.png)
+
 2. **Radiolink Acquisition Scenario**: The user may input a series of parameters in order to simulate the financials (Cash Flow) of an acquisition scenario of the radiolinks of a company.
+
+![image](screenshots/sc3.png)
+![image](screenshots/sc4.png)
+
 
 ## 1. General Requirements and Dependencies
 
