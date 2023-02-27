@@ -1,3 +1,19 @@
+***
+### **About this Repo**
+
+<em>Dated: 27-Feb-2023</em>
+
+This solution was developed for Lineox (https://lineox.es/) as part of the Capstone Project for IE School of Science & Technology's MSc. Business Analytics & Big Data programme. 
+
+The team--
+- Alejandro Garcia-Valdecasas
+- Álvaro López-Chacarra
+- Manon Stévenne
+- Mishari Aldukair
+- Sahana Roy
+
+***
+
 # Lineox Capstone Project - Documentation
 
 ## Abstract
