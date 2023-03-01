@@ -8,7 +8,7 @@ definitions = {
     },
     'discountRate' : {
         'def' : '''
-        Rate to use for the NPV (Net Present Value) of the investment.
+        Discount rate the NPV (Net Present Value) of the investment.
         ''',
         'value' : 8.00
     },
@@ -52,7 +52,7 @@ definitions = {
         'def' : '''
         Buying offer for each radiolink.
         ''',
-        'value' : 10000
+        'value' : 15000
     },
     'bandTransfer' : {
         'def' : '''

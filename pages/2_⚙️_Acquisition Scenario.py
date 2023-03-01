@@ -24,7 +24,7 @@ st.header('Acquisition Scenario')
 col1, col2, col3, col4 = st.columns([2,1,1,1], gap='medium')
 with col1:
     st.markdown('**Range of Frequencies Exempted from Tax**')
-    freqExemptedRange = st.slider('Select:',min_value=0,max_value=100, value=[13,25])
+    freqExemptedRange = st.slider('Select:',min_value=0,max_value=100, value=[13,24])
 
     st.markdown('**Select Company to Acquire**')
     owner_op = st.selectbox('Company:', options= dataLineox.companiesList, index=15)
