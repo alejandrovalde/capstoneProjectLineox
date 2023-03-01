@@ -190,8 +190,7 @@ class dataLineox:
         dfNotOwned['Fees'] = dfNotOwned['Fees'].round(0)
         dfNotOwned['Migrate'] = ['No'] * len(labels)
         return dfNotOwned
-
-
+    
 ### Other functions for Acquisiton Scenario
 
 def generateCashFlow(radioLinksOwned, periodsList, dfMigratedData, dfInitialUpdatedData, costs):
